@@ -20,4 +20,7 @@ export const theme = {
       secondary: 'Inconsolata',
     },
   },
+  spacing: {
+    xs: '1.3rem',
+  },
 }
