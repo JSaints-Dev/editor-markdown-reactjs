@@ -11,7 +11,7 @@ export const SideBarContainer = styled.div`
 export const AreaLogo = styled.div`
   align-items: center;
   display: flex;
-  height: 20%;
+  height: 15%;
   justify-content: center;
   width: 100%;
 `
