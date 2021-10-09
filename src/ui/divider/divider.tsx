@@ -3,7 +3,8 @@ import { theme } from 'resources/theme'
 
 type typeDivider = {
   bgColor?: keyof typeof theme.colors;
-  marginY?: keyof typeof theme.spacing | 0;
+  marginBottom?: keyof typeof theme.spacing | 0;
+  marginTop?: keyof typeof theme.spacing | 0;
 }
 
 export const Divider = styled.div<typeDivider>`
@@ -14,7 +15,11 @@ export const Divider = styled.div<typeDivider>`
     background-color: ${theme.colors[bgColor]};
   `}
 
-  ${({ marginY }) => marginY && css`
-    margin: ${theme.spacing[marginY]} 0;
+  ${({ marginBottom }) => marginBottom && css`
+    margin: 0 0 ${theme.spacing[marginBottom]} 0;
+  `}
+
+  ${({ marginTop }) => marginTop && css`
+    margin: ${theme.spacing[marginTop]} 0 0 0;
   `}
 `
