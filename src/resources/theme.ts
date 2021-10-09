@@ -9,7 +9,7 @@ export const theme = {
   },
   fonts: {
     fontSizes: {
-      xs: '1.3rem',
+      xs: '0.8rem',
       sm: '1.6rem',
       md: '1.8rem',
       lg: '2rem',
@@ -21,6 +21,7 @@ export const theme = {
     },
   },
   spacing: {
-    xs: '1.3rem',
+    xs: '0.8rem',
+    md: '2rem',
   },
 }
