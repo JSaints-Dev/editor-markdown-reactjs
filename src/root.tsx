@@ -12,7 +12,7 @@ export function Root () {
   )
 }
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
   }

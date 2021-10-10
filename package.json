@@ -37,10 +37,23 @@
     "lint": "eslint src --ext ts,tsx --no-eslintrc --config .eslintrc-default.json",
     "lint:fix": "yarn lint --fix",
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
-    "extends": "./.eslintrc.json"
+    "extends": "./.eslintrc.json",
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*",
+          "**/stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
   },
   "browserslist": {
     "production": [
@@ -53,5 +66,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.3.10",
+    "@storybook/addon-essentials": "^6.3.10",
+    "@storybook/addon-links": "^6.3.10",
+    "@storybook/node-logger": "^6.3.10",
+    "@storybook/preset-create-react-app": "^3.2.0",
+    "@storybook/react": "^6.3.10"
   }
 }
