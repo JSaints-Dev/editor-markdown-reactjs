@@ -1,3 +1,5 @@
+import { SideBar } from 'sidebar'
+
 export function App () {
-  return <h1>app</h1>
+  return <SideBar />
 }
