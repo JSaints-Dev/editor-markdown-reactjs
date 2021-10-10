@@ -1,6 +1,6 @@
 import * as S from './styles'
 import { Logo } from 'sidebar/logo'
-import { Divider } from 'ui/divider'
+import { Button, Divider, Typography } from 'ui'
 
 export function SideBar () {
   return (
@@ -8,7 +8,13 @@ export function SideBar () {
       <S.AreaLogo>
         <Logo />
       </S.AreaLogo>
-      <Divider marginY='xs' bgColor='primary' />
+      <Divider marginBottom='md' bgColor='primary' />
+      <Button>
+        <S.Plus />
+        <Typography variant='span' fontWeight={400}>
+          Adicionar arquivos
+        </Typography>
+      </Button>
     </S.SideBarContainer>
   )
 }
